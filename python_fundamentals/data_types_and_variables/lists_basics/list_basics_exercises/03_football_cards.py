@@ -7,19 +7,15 @@ is_terminated = False
 
 for card in card_sequence:
     card_list = card.split('-')
-    if len(team_a) < 7 or len(team_b) < 7:
-        is_terminated = True
-        break
     if card_list[0] == 'A':
         if int(card_list[1]) in team_a:
             team_a.remove(int(card_list[1]))
-        else:
-            continue
     elif card_list[0] == 'B':
         if int(card_list[1]) in team_b:
             team_b.remove(int(card_list[1]))
-        else:
-            continue
+    if len(team_a) < 7 or len(team_b) < 7:
+        is_terminated = True
+        break
 
 print(f'Team A - {len(team_a)}; Team B - {len(team_b)}')
 if is_terminated or (len(team_a) < 7 or len(team_b) < 7):
