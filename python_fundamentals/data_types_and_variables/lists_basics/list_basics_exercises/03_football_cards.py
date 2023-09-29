@@ -18,5 +18,5 @@ for card in card_sequence:
         break
 
 print(f'Team A - {len(team_a)}; Team B - {len(team_b)}')
-if is_terminated or (len(team_a) < 7 or len(team_b) < 7):
+if is_terminated:
     print('Game was terminated')
