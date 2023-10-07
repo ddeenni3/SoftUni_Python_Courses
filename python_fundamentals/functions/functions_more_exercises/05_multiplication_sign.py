@@ -19,3 +19,4 @@ second_number = int(input())
 third_number = int(input())
 
 print(multiply_result(first_number, second_number, third_number))
+
