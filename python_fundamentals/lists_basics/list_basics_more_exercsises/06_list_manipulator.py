@@ -57,7 +57,7 @@ while True:
             for num in list_evens:
                 if num < min_num:
                     min_num = num
-            for index in range(len(list_as_integers) -1, - 1, - 1):
+            for index in range(len(list_as_integers) - 1, - 1, - 1):
                 if list_as_integers[index] == min_num:
                     min_num_index = index
                     break
