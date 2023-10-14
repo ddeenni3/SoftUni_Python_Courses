@@ -6,10 +6,10 @@ def next_version(version: list):
         if version[1] > 9:
             version[1] = 0
             version[0] += 1
-    return list(map(str, version))
+    return list(map(str, version))  # [str(x) for x in version]
 
 
-current_version = list(map(int, input().split('.')))
+current_version = list(map(int, input().split('.')))  # [int(x) for x in input().split('.')]
 
 print('.'.join(next_version(current_version)))
 
