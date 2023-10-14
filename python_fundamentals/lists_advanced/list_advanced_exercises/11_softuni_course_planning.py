@@ -45,5 +45,5 @@ while True:
             if lesson_title in course_schedule and f'{lesson_title}-Exercise' not in course_schedule:
                 lesson_index = course_schedule.index(lesson_title)
                 course_schedule.insert(lesson_index + 1, f'{lesson_title}-Exercise')
-for lesson in range(1, len(course_schedule) + 1):
-    print(f'{lesson}.{course_schedule[lesson-1]}')
+for position, lesson in enumerate(course_schedule, 1):
+    print(f'{position}.{lesson}')
