@@ -47,3 +47,5 @@ while True:
                 course_schedule.insert(lesson_index + 1, f'{lesson_title}-Exercise')
 for position, lesson in enumerate(course_schedule, 1):
     print(f'{position}.{lesson}')
+
+enumerate()
