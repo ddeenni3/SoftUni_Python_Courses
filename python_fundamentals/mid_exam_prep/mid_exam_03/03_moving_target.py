@@ -25,6 +25,7 @@ targets = [int(x) for x in input().split()]
 while True:
     command = input()
     if command == 'End':
+        print('|'.join(str(x) for x in targets))
         break
     current_command = command.split()
     if current_command[0] == 'Shoot':
@@ -39,5 +40,3 @@ while True:
         index = int(current_command[1])
         radius = int(current_command[2])
         strike(index, radius, targets)
-
-print('|'.join(str(x) for x in targets))
