@@ -11,21 +11,13 @@ while True:
     visiting_index = last_visited_index + jump_length
     if last_visited_index + jump_length >= len(needed_hearts_per_house):
         visiting_index = 0
-        if needed_hearts_per_house[0] - 2 >= 0:
-            needed_hearts_per_house[0] -= 2
-            if needed_hearts_per_house[visiting_index] == 0:
-                print(f'Place {visiting_index} has Valentine\'s day.')
-        else:
-            needed_hearts_per_house[0] = 0
-            print(f'Place {visiting_index} already had Valentine\'s day.')
+    if needed_hearts_per_house[visiting_index] - 2 >= 0:
+        needed_hearts_per_house[visiting_index] -= 2
+        if needed_hearts_per_house[visiting_index] == 0:
+            print(f'Place {visiting_index} has Valentine\'s day.')
     else:
-        if needed_hearts_per_house[visiting_index] - 2 >= 0:
-            needed_hearts_per_house[visiting_index] -= 2
-            if needed_hearts_per_house[visiting_index] == 0:
-                print(f'Place {visiting_index} has Valentine\'s day.')
-        else:
-            needed_hearts_per_house[visiting_index] = 0
-            print(f'Place {visiting_index} already had Valentine\'s day.')
+        needed_hearts_per_house[visiting_index] = 0
+        print(f'Place {visiting_index} already had Valentine\'s day.')
     last_visited_index = visiting_index
 
 
