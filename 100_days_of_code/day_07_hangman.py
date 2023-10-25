@@ -44,7 +44,7 @@ def main():
     current_word, max_guesses = choose_category()
     current_word = [x for x in current_word]
     display = ['_'] * len(current_word)
-    print(f'psst the word is {"".join(current_word)}')
+    print("".join(display))
     while True:
         current_guess = input('Letter to try: ')
         if current_guess in [x.lower() for x in display]:
@@ -54,7 +54,7 @@ def main():
             max_guesses -= 1
             print(f'Remaining guesses {max_guesses}')
             if max_guesses == 0:
-                print(f'You ran out of guesses\nThe word was: {current_word}')
+                print(f'You ran out of guesses\nThe word was: {"".join(current_word)}')
                 break
         else:
             for pos, letter in enumerate(current_word):

@@ -21,4 +21,5 @@ while True:
     print(cypher(text, alphabet, shift, direction))
     restart_program = input('Would you like to encode/decode another message? Y/N:\n').lower()
     if restart_program == 'n':
+        print('Goodbye!')
         break
